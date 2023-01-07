@@ -530,7 +530,7 @@ function module.Start()
 		if
 			Object:IsA("BasePart")
 			and Utilities.WaitForChildOfClass(Object, "Bone", 3)
-			and game.Workspace:IsAncestorOf(Object)
+			and (game.Workspace:IsAncestorOf(Object) or Object:FindFirstAncestorOfClass("ViewportFrame"))
 		then
 			local RootList = {}
 
